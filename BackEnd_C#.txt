@@ -1,0 +1,12 @@
+La branche backEndLes extensions de C#:
+	Les fichiers et répertoires
+	La sérialisation
+	Les streams
+	Le data binding avec WPF
+	Les styles WPF
+	Les tasks et la Programmation asynchrone
+	Le code non-managé
+	Le cryptage symétrique
+	Le cryptage asymétrique
+	La configuration et les middlewares
+	La gestion du cache
