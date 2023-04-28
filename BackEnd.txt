@@ -1,0 +1,27 @@
+Exercice BackEnd
+
+Défi
+Vous êtes développeur pour une boutique en ligne, cette dernière vend des vêtements et du matériel de sport. 
+Vous allez donc devoir développer cette boutique, avec la gestion des paniers et commandes des clients. 
+Dans un premier temps, vous allez devoir définir les principaux objets utiliser par cette boutique, et quelques fonctions simple.
+
+Question 1
+Proposer une structure type pour votre objet article, les principales informations nécessaires sont la référence, la description, le prix, et la quantité. 
+Les informations sur la référence et la description seront accessibles uniquement en lecture, et la structure possédera un constructeur.
+
+Ajouter à notre structure Article, une méthode GetTotalArticle, permettant de retourner le total lié à cet article (prix X quantité).
+
+Question 2
+Proposer une solution pour l'objet du panier, Basket, il contient la liste de tous les articles de la commande en cours et il doit être possible d'accéder 
+aux articles directement de la manière suivante : Basket[index].
+
+Question 3
+Compléter la méthode GetTotalBasket(Basket basket) qui va parcourir notre panier (via l'indexeur), et additionner l'ensemble des totaux des articles, 
+pour enfin retourner le total du panier.
+
+Question 4
+Lorsqu'un panier est validé, une commande va être générée, proposer une structure Order contenant l'ensemble des articles de la commande, la date de commande, la date d'expédition, le prix final, son état, etc.
+
+Afin de pouvoir gérer son état, proposer une énumération comportant les différents états possibles d'une commande (reçus, préparée, envoyée...).
+
+Créer aussi le constructeur de cette structure.
