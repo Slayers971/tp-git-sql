@@ -1,0 +1,35 @@
+*//*A partir du schéma relationnel suivant, déterminez les requêtes SQL. 
+Auteur (aut_id, nom, prenom, nat)
+Ecrire (ecrit_id, aut_id, num_ouv)
+Ouvrage (num_ouv, titre, date_par, nom_edit)
+Exemplaire (num_ex, num_ouv, lec_num, date_emp, date_ret)
+Lecteur (lec_num, nom, prenom, adr)
+
+// 1- Comment afficher l'ensemble de la table 'auteur' ?  
+// 2- Combien y a-t-il de lignes dans la table 'auteur' ?  
+// 3- Quels sont les noms et prénoms des auteurs triés par ordre alphabétique ? 
+// 4- Quels sont les noms des auteurs qui n'ont pas de prénoms de renseignés (null) ? 
+// 5- Quelles sont les nationalités présentes dans la table 'auteur' ? 
+// 6- Quels sont les noms des auteurs français qui ont un prénom de renseigné ? 
+// 7- Quels sont les noms des auteurs de nationalité française ayant pour prénom 'Paul' ? 
+// 8- Quels sont les noms des auteurs de nationalité française ayant pour prénom 'Paul' ou 'Jean' ? 
+// 9- Quels sont les noms des auteurs de nationalité anglaise ou espagnole ? 
+// 10- Quels sont les noms des auteurs qui n'ont pas la nationalité française ? 
+// 11- Combien y a-t-il d'auteurs de nationalité française ? 
+// 12- Combien y a-t-il de nationalités ? 
+// 13- Combien y a-t-il d'auteurs par nationalité ? 
+// 14- Quels sont les éditeurs et les dates de parution pour le livre 'Pensées philosophiques' ? 
+// 15- Même question pour le livre 'Pensées' ? 
+// 16- Donnez les éditeurs et les ouvrages ayant été édités après septembre 2019 ? 
+// 17- Quels sont les ouvrages édités entre le 01 separbre 2020 et le 31 décembre 2020 ? 
+// 18- Quels sont les ouvrages édités sur l'années 2018 ? 
+// 19- Combien d'ouvrages de Zola sont présents ? 
+// 20- Quels sont les noms des ouvrages de Zola ? 
+// 21- Quel auteur a écrit "Les Fleurs du mal" ? 
+// 22- Quels sont les auteurs qui ont plus de 3 ouvrages ? 
+// 23- Quelle est la moyenne du nombre d'ouvrages par auteur ? 
+// 24- Quels sont les ouvrages ayant plusieurs auteurs ? 
+// sans requête imbriquée // avec une requête imbriquée 
+// 25- Quel est l'auteur avec le plus d'ouvrages ? // sans requête imbriquée // avec une requête imbriquée */
+// 26- Afficher tous les ouvrages qui sont ecrits par auteur qui commence par 'A' son nom.
+// 27- Quel est l'ouvrage le plus d'exemplaire ?
