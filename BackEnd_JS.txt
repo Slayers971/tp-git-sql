@@ -1,0 +1,48 @@
+Pour le JavaScript 
+
+Question 1:
+Vous écrirez une fonction mySandwich annonçant dans une boîte de dialogue deux ingrédients composant un sandwich. 
+L'annonce de la fin du repas doit se faire d'une boîte de dialogue déclenchée par la fonction endSandwich utilisée comme fonction de rappel
+
+Donnez la solution à ce probleme
+
+Question 2: 
+Pour qu'un utilisateur puisse accéder à notre application, on considère qu'il doit s'agir de l'utilisateur "admin". 
+On souhaite également lui faire résoudre une opération simple afin de vérifier qu'il ne s'agit pas d'un robot.
+
+Ces deux opérations doivent être un succès pour qu'il puisse continuer : on ne lui donnera accès à rien tant qu'il n'aura pas donné ces deux renseignements.
+
+Complétez le code ci-dessous afin de rendre ce système opérationnel. Implémentez le contenu des deux promesses. 
+La première vérifiera que le nom d'utilisateur saisi vaut bien "admin", la seconde vérifiera que l'utilisateur a bien répondu "4".
+
+Les deux promesses seront résolues grâce à la méthode all().
+
+function askUsername() {
+  return prompt('Quel est votre nom d\'utilisateur ?')
+}   
+
+function askMathOperation() {
+  return prompt('Combien font 2 + 2')
+}   
+
+function success() {
+  console.log('Vous pouvez accéder à l\'application')
+}
+
+function error() {
+  console.log('Restez où vous êtes')
+}
+
+function checkUsername() {
+  return new Promise((resolve, reject) => {
+    // code à implémenter
+  })
+}
+
+function checkIfIsBot() {
+  return new Promise((resolve, reject) => {
+    // code à implémenter
+  })
+}
+
+// Résolution des promesses
