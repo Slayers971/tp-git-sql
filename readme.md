@@ -24,3 +24,9 @@ Master:
  > sgbd > SQL | Oracle| PLSQL,  
  > back-end > vde-C++| vde-C# | vde-NodeJS | vde-PHP,   
  > JS(front-end)   
+# readme.me
+
+Cette branche nous permet juste de mettre su script Git pour les reponses de nos exo
+# readme.me
+
+Cette branche nous permet juste de mettre su script Git pour les reponses de nos exo
