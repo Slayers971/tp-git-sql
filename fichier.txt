@@ -1,4 +1,1 @@
-aaaaah la vache nous pourrit du lait
-# Je rajoute des commentaires ici
-*.pdf # suppression de tous les fichiers en pdf
-		
+je rajoute encore beaucoup plus de text
