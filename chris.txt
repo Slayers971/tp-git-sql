@@ -1,0 +1,36 @@
+Défi
+*************************Au final, je peux avoir simplement le script***************************************
+Vous rejoignez une nouvelle équipe dans le but de travailler sur la refonte d'un site Internet pour la société Laure & Mipsum. Il s'agit des prémices du projet, le dépôt vient d'être initialisé.
+
+Ce projet est accessible à cette adresse : https://github.com/Slayers971/tp-git-sql/invitations.
+
+Vous découvrez vos premières tâches.
+
+Question
+Vous devez dans un premier temps initialiser le projet sur votre environnement local.
+
+Cette refonte n'étant pas votre premier projet, vous clonerez le dépôt en le nommant "refonte-laure-et-mipsum".
+
+Solution
+Question
+Vous êtes chargé d'initialiser un fichier .gitignore.
+
+On considère que les fichiers .txt, docx et pdf seront systématiquement ignorés, tout comme les répertoires uploads et vendors.
+
+Le répertoire uploads contient un fichier README.md qu'il conviendra de conserver.
+
+Vous commiterez les modifications apportées dans un commit intitulé "MISC : Init .gitignore".
+
+Solution
+Question
+Le dossier de documentation n'a pas été nommé de façon suffisamment explicite.
+
+Vous êtes chargé de le renommer en "documentation" et de commiter ces modifications dans un commit intitulé "DOC: Rename documentation direction".
+
+
+
+
+
+
+
+
