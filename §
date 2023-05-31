@@ -1,0 +1,54 @@
+Fonctionnement du GitHub Flow
+Nous allons voir plus en détails le fonctionnement d'un workflow Git grâce au GitHub Flow.
+
+Il a l'avantage d'être très simple, de s'intégrer parfaitement avec les outils de GitHub, et de s'adapter particulièrement bien dans le cadre du déploiement continu, comme dans le cas du développement d'applications web.
+
+Méthode
+Création de branches
+Toutes les branches doivent partir de la branche main.
+
+La branche main doit toujours être déployable, donc contenir une version stable du projet.
+
+Les noms des branches doivent décrire ce qu'elles contiennent.
+
+Méthode
+Création de commits
+Les commits sont faits sur les branches. Ils doivent avoir un message clair, reflétant la modification effectuée dans le commit.
+
+Méthode
+Ouverture d'une pull request
+Une pull request est un mécanisme permettant de proposer, via l'interface de GitHub, une différence entre une branche et une autre. Elle permet de visualiser le travail effectué et d'obtenir de l'aide ou une simple revue de code en vue d'une fusion. Nous pouvons retrouver le terme de merge request avec d'autres forges logicielles (GitLab, par exemple).
+
+Le système de @mention peut être utilisé pour interpeller une équipe ou un autre utilisateur.
+
+Méthode
+Discussion et relecture de code
+Dans une pull request, il est possible de commenter le code produit ou de poser des questions. Par exemple, nous pourrions indiquer que la pull request ne respecte pas les bonnes pratiques établies sur le projet en termes de normes de codage, de tests.
+
+Si la pull request nous appartient et que nous avons des retours concernant, par exemple, une anomalie présente dans notre code, nous pouvons la corriger et pousser de nouveau les modifications de notre branche. La pull request sera mise à jour automatiquement.
+
+Méthode
+Déploiement
+Une fois notre pull request validée, il est possible de déployer notre branche automatiquement depuis GitHub et de tester nos modifications en production pour valider qu'elles fonctionnent correctement.
+
+Si les modifications ne fonctionnent pas, nous pourrons revenir en arrière en redéployant la branche main.
+
+Méthode
+Merge
+Une fois la livraison effectuée et validée, nous pouvons merger notre branche dans la branche main. L'historique de la pull request est gardé, permettant de comprendre, plus tard, pourquoi tel ou tel choix a été fait pour ce développement.
+
+Nous pouvons faire référence à une issue directement dans le texte de la pull request afin d'effectuer sur celle-ci des opérations automatiques. Par exemple, Closes #13 fermera l'issue n°13.
+
+Complément
+D'autres workflows
+Ils existent d'autres workflows, mais GitFlow et GitLab Flow sont les plus connus :
+
+Le GitFlow est plus adapté dans le cadre du développement de logiciels pouvant apparaître dans plusieurs versions, comme c'est le cas pour les applications de bureau. Il permet aussi de gérer un système de release qui peut embarquer le contenu de plusieurs branches, et donc plusieurs fonctionnalités.
+
+Le GitLab Flow est une évolution du GitFlow pour gérer le passage d'un environnement de déploiement à un autre, par exemple si nous avons un serveur de production à destination des utilisateurs finaux, et un autre de préproduction dont le but est de valider une version de notre application avant de la livrer au grand public.
+
+Syntaxe
+À retenir
+Un workflow Git permet de décrire une méthode de travail à appliquer par tous les acteurs d'un projet. De cette façon, il est possible de limiter les erreurs en termes de fusion de branches et de tester plus efficacement les applications avant et après leur livraison.
+
+Plusieurs workflows existent, parmi lesquels on retrouve le GitHub Flow, le Git Flow et GitLab Flow, chacun possédant ses avantages.
