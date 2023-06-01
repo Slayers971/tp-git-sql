@@ -1,0 +1,94 @@
+Résume ASP.NET
+
+
+Lorsque vous commencez à utiliser ASP.NET Core, il peut être déroutant de constater qu'il existe différents frameworks d'application.
+
+Comme vous allez le voir, ces frameworks sont complémentaires et résolvent différents problèmes ou, pour certaines fonctionnalités, résolvent les mêmes problèmes de différentes manières.
+
+ASP.NET Core repose sur l'architecture suivante :
+
+
+Microsoft ASP.NET Core s'inscrit dans l'histoire des technologies Microsoft utilisées pour créer des sites Web et des services Web qui ont évolué au fil des ans tels que :
+
+• Active Server Pages (ASP), lancé en 1996, était la première tentative de Microsoft de créer une plate-forme pour l'exécution dynamique, côté serveur, du code d'un site Web. Les fichiers ASP contiennent un mélange de HTML et de code qui s'exécute sur le serveur, écrit en langage VBScript.
+
+• Les formulaires Web d'ASP.NET ont été publiés en 2002 avec le framework .NET et sont conçus pour permettre aux développeurs non Web, tels que ceux qui sont familiers avec Visual Basic, de créer rapidement des sites Web en faisant glisser et en déposant des composants visuels, et en écrivant du code piloté par événements en Visual Basic ou C#. Les formulaires Web ne peuvent être hébergés que sur Windows, mais ils sont encore utilisés aujourd'hui dans des produits tels que Microsoft SharePoint. Il est préférable de l'éviter pour les nouveaux projets Web au profit d'ASP.NET Core.
+
+• Windows Communication Foundation (WCF) a été lancé en 2006 et permet aux développeurs de créer des services SOAP et REST. SOAP est puissant mais complexe, il est donc à éviter à moins que vous n'ayez besoin de fonctionnalités avancées, telles que des transactions distribuées.
+
+• ASP.NET MVC a été lancé en 2009 et a été conçu pour séparer proprement les rôles des développeurs Web entre les modèles, qui stockent temporairement les données, et les vues qui présentent les données sous différents formats dans l'interface utilisateur, et les contrôleurs, qui récupèrent le modèle et le transmettent à une vue. Cette séparation permet d'améliorer la réutilisation et les tests unitaires.
+
+• L'API Web ASP.NET a été lancée en 2012 et permet aux développeurs de créer des services HTTP, également connus sous le nom de services REST, qui sont plus simples et plus évolutifs que les services SOAP.
+
+• ASP.NET SignalR a été lancé en 2013 et permet la communication en temps réel dans les sites Web en s'abstrayant des technologies et techniques sous-jacentes, telles que WebSockets et Long Polling. Cela permet d'utiliser des fonctionnalités de sites Web comme le chat en direct ou les mises à jour de données sensibles au temps, comme les cours de la bourse, sur une grande variété de navigateurs Web, même s'ils ne prennent pas en charge une technologie sous-jacente comme Web Sockets.
+
+• ASP.NET Core a été publié en 2016 et combine MVC, API Web et SignalR, en s'exécutant sur .NET Core. Par conséquent, il peut s'exécuter sur plusieurs plateformes. ASP.NET Core dispose de nombreux modèles de projet pour vous permettre de démarrer avec les technologies qu'il prend en charge.
+
+ASP.NET contre ASP.NET Core
+Jusqu'à présent, ASP.NET a été construit sur la base d'un grand assemblage dans le .NET Framework appelé System.Web.dll et il est étroitement couplé au serveur Web de Microsoft pour Windows uniquement, appelé Internet Information Services (IIS).
+
+Au fil des ans, cet assemblage a accumulé de nombreuses fonctionnalités, dont beaucoup ne sont pas adaptées au développement multiplateforme moderne. ASP.NET Core est une refonte majeure d'ASP.NET. Il supprime la dépendance à l'égard de l'assemblage System.Web.dll et d'IIS et se compose de paquets modulaires légers, tout comme le reste de .NET Core.
+
+Vous pouvez développer et exécuter des applications ASP.NET Core multiplateformes sous Windows, macOS et Linux. Microsoft a même créé un serveur Web multiplateforme super performant, appelé Kestrel, et la pile entière est open source.
+
+Les projets ASP.NET Core 2.2 ou ultérieurs adoptent par défaut le nouveau modèle d'hébergement en cours de processus. Cela permet d'améliorer les performances de 400 % lors de l'hébergement dans Microsoft IIS, mais Microsoft recommande toujours d'utiliser Kestrel pour des performances encore meilleures.
+
+Introduction à l'architecture MVC
+Le framework MVC a été introduit à l'époque pré-Core d'ASP.NET.
+
+L'ASP.NET original s'appuyait sur un modèle de développement appelé Pages Web, qui recréait l'expérience de l'écriture d'applications de bureau mais donnait lieu à des projets Web lourds et peu évolutifs.
+
+Le framework MVC a été introduit en même temps que les pages Web, avec un modèle de développement qui adoptait le caractère du HTTP et du HTML, plutôt que d'essayer de le cacher.
+
+MVC est l'abréviation de Model-View-Controller, un modèle de conception qui décrit la forme d'une application.
+
+Le modèle MVC met l'accent sur la séparation des rôles, où les domaines de fonctionnalité sont définis indépendamment, ce qui a constitué une solution efficace aux architectures indistinctes auxquelles les pages Web ont donné lieu.
+
+Les premières versions du framework MVC ont été construites sur les fondations ASP.NET, conçues à l'origine pour les pages Web, ce qui a donné lieu à des fonctionnalités et des solutions de contournement peu pratiques. Avec le passage à .NET Core, ASP.NET est devenu ASP.NET Core, et le framework MVC a été reconstruit sur une base ouverte, extensible et multiplateforme. Le framework MVC reste un élément important d'ASP.NET Core, mais la façon dont il est couramment utilisé a changé avec l'essor des applications à page unique (SPA ou Single Page Application).
+
+Dans une SPA, le navigateur effectue une seule requête HTTP et reçoit un document HTML donné au code client, généralement écrit dans un client JavaScript tel qu'Angular ou React. Le passage aux SPA signifie que la séparation nette pour laquelle le framework MVC était initialement conçu n'est plus aussi importante, et que l'accent mis sur le respect du modèle MVC n'est plus essentiel, même si le framework MVC reste utile (et est utilisé pour prendre en charge les SPA par le biais de services Web).
+
+Comprendre les pages Razor
+L'un des inconvénients du framework MVC est qu'il peut exiger beaucoup de travail préparatoire avant qu'une application puisse commencer à produire du contenu. Malgré ses problèmes structurels, l'un des avantages des pages Web était que des applications simples pouvaient être créées en quelques heures.
+
+Razor Pages reprend le principe de développement des pages Web et la met en œuvre en utilisant les fonctionnalités de la plate-forme initialement développées pour le framework MVC. Le code et le contenu sont mélangés pour former des pages autonomes, ce qui recrée la rapidité du développement des pages Web sans certains des problèmes techniques sous-jacents (bien que la question de la mise à l'échelle des projets complexes puisse toujours être un problème). Les pages Razor peuvent être utilisées avec le framework MVC.
+
+Comprendre Blazor
+L'essor des frameworks JavaScript côté client peut constituer un obstacle pour les développeurs C#, qui doivent apprendre un langage de programmation différent. Mais il faut du temps et de l'engagement pour devenir compétent dans un nouveau langage de programmation, surtout s'il présente des différences fondamentales avec C#. Blazor tente de combler ce fossé en permettant l'utilisation de C# pour écrire des applications côté client. Il existe deux versions de Blazor :
+
+• Blazor Server
+
+• Blazor WebAssembly
+
+Blazor Server est une partie stable et supportée de ASP.NET Core, et il fonctionne en utilisant une connexion HTTP persistante au serveur ASP.NET Core, où le code C# de l'application est exécuté.
+
+De son côté, Blazor WebAssembly est une version expérimentale qui va un peu plus loin et exécute le code C# de l'application dans le navigateur. Aucune des versions de Blazor ne convient à toutes les situations, mais ils donnent tous deux un sens à l'avenir du développement d'ASP.NET Core.
+
+Les utility Framework
+Deux frameworks sont étroitement associés à ASP.NET Core mais ne sont pas utilisés directement pour générer du contenu ou des données HTML.
+
+Entity Framework Core est le framework de mapping objet-relationnel (ORM) de Microsoft, qui représente les données stockées dans une base de données relationnelle sous forme d'objets .NET.
+
+Entity Framework Core peut être utilisé dans n'importe quelle application .NET Core, et il est couramment utilisé pour accéder aux bases de données dans les applications ASP.NET Core.
+
+ASP.NET Core Identity est le framework d'authentification et d'autorisation de Microsoft. Il est utilisé pour valider les informations d'identification des utilisateurs dans les applications ASP.NET Core et pour restreindre l'accès aux fonctionnalités de l'application.
+
+La plate-forme ASP.NET Core
+La plate-forme ASP.NET Core contient les fonctionnalités de bas niveau nécessaires pour recevoir et traiter les requêtes HTTP et créer des réponses. Il y a un serveur HTTP intégré, un système de composants middleware pour traiter les requêtes, et des fonctions de base dont dépendent les frameworks d'application, comme le routage des URL et le moteur de vue Razor. Vous passerez la majeure partie de votre temps de développement avec les framework d'application, mais l'utilisation efficace d'ASP.NET Core nécessite une compréhension des puissantes capacités offertes par la plateforme, sans lesquelles les frameworks de niveau supérieur ne pourraient pas fonctionner.
+
+Nous n'avons pas décrit deux fonctionnalités notables de la plateforme dans ce cours : SignalR et gRPC.
+
+SignalR est utilisé pour créer des canaux de communication à faible latence entre les applications. Il constitue la base du framework Blazor Server, mais SignalR est rarement utilisé directement, et il existe de meilleures alternatives pour les quelques projets qui ont besoin d'une messagerie à faible latence, comme Azure Event Grid ou Azure Service Bus.
+
+gRPC est une norme émergente pour les appels de procédure à distance (RPC ou Remote Protocol Call) multiplateformes sur HTTP, créée à l'origine par Google (le g de gRPC) et offrant des avantages en termes d'efficacité et d'évolutivité. gRPC pourrait être la future norme pour les services Web, mais elle ne peut pas être utilisée dans les applications Web car elle nécessite un contrôle de bas niveau des messages HTTP qu'elle envoie, ce que les navigateurs ne permettent pas.
+
+Syntaxe
+A retenir
+• ASP.NET Core a été publié en 2016 et combine MVC, API Web et SignalR.
+
+• MVC est l'abréviation de Model-View-Controller, un modèle de conception qui décrit la forme d'une application.
+
+• Les pages Razor peuvent être utilisées avec le framework MVC.
+
+• Il existe deux versions de Blazor Blazor Server et Blazor WebAssembly.
+
