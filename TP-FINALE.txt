@@ -1,0 +1,46 @@
+
+
+Questions:
+
+1. La réécriture d'historique est une opération sans danger, parce que Git nous empêche de faire des erreurs.
+Vrai ou Faux?
+
+2. Quelle commande permet d'ajouter les commits d'une branche après ceux d'une autre branche ?
+3. Quelle commande permet de récupérer les commits d'une branche avant ceux d'une branche en cours ?
+4. Quelle commande va me permettre de récupérer l'historique A---B---C---D---E'---F' sur la branche bugfix à partir de l'historique suivant ?
+	
+	A---B---C---D ← master
+	    \
+	    E---F ← bugfix
+
+	Réponse: git checkout master && git rebase bugfix ou git checkout bugfix && git rebase master
+
+5. Quelle commande va initialiser la réécriture de l'historique de la branche bugfix pour fusionner les deux derniers commits ?
+	
+	A---B---C---D ← bugfix
+
+	Réponses : git rebase -i HEAD~2
+		   git rebase -i HEAD^^
+		   git rebase -i C
+		   git rebase -i bugfix
+6. Lorsqu'on fait un rebasage interactif, que fait le choix fixup dans la liste ?
+7. Lorsqu'on fait un rebasage interactif, les commits sont affichés dans la liste (de haut en bas)...? Argumentez de façon bref s'il vous plait
+8. Quelle commande doit-on utiliser après avoir fait le rabasage de commits déjà présents sur l'upstream ?
+
+9. Dans un nouveau répertoire, clonez le projet suivant : https://github.com/laravel/laravel.git (ce repos est imaginaire)
+
+   Définissez une commande qui permettra d'afficher l'historique de tous les commits depuis 30 jours, ainsi que les branches dont ils proviennent.
+
+   Ces messages seront affichés sous la forme : identifiant_court - message_commit  - auteur, le date.
+   
+   Ici, nous n'avons que besoin du script
+
+10. Quellest la commande qui affichera le commit dans ce format => Identifiant version courte : Date de commit?
+    
+    Ne mettre que le script s'il vous plait! 
+
+11. Suivant le repos que nous utilisons habituellement tp-git-sql quelles sont les commandes qui:
+    - Afficher les commits d'un auteur spécifique
+    - Filtrer les commits depuis une période donnée : 1 semaine, 2 mois
+    - Puis creer une nouvelle branche et faites 7 commits puis Avant de publier votre branche, factorisez l'ensemble des commits de travail effectués en un seul commit, que vous renommerez selon les conventions du projet.
+      
